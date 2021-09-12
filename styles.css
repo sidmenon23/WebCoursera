@@ -1,0 +1,634 @@
+        @font-face {
+            font-family: OpenSans-Regular;
+            src: url('./fonts/OpenSans/OpenSans-Regular.ttf');
+        }
+        
+        body {
+            background: lightblue url("./background_image/background_2_opacity.png");
+            background-repeat: repeat;
+            background-attachment: fixed;
+            background-size: contain;
+        }
+        
+        .nav-bar {
+            background-color: #190073;
+        }
+        
+        .nav-bar-header {
+            color: white !Important;
+            margin-top: 2px;
+        }
+        
+        .nav-bar-header:hover {
+            color: white;
+            background-color: rgb(252, 152, 3);
+        }
+        
+        .some-page-wrapper {
+            background-color: white
+        }
+        
+        .rows {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+            width: 100%;
+        }
+        
+        .columns {
+            display: flex;
+            flex-direction: column;
+            flex-basis: 100%;
+            flex: 1;
+        }
+        
+        .column_left {
+            background-color: rgb(255, 255, 255);
+            box-sizing: border-box;
+            width: 950;
+        }
+        
+        .card {
+            /* Add shadows to create the "card" effect */
+            background-color: rgb(25, 0, 115);
+            padding: 20px;
+            padding-bottom: 40px;
+            margin-right: 60px;
+            margin-left: 60px;
+            margin-top: 70px;
+            margin-bottom: 100px;
+            border-radius: 20px;
+        }
+        /* On mouse-over, add a deeper shadow */
+        
+        .card:hover {
+            box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        }
+        
+        .mySlides {
+            display: none;
+        }
+        
+        .fade {
+            -webkit-animation-name: fade;
+            -webkit-animation-duration: 4s;
+            animation-name: fade;
+            animation-duration: 4s;
+        }
+        
+        @-webkit-keyframes fade {
+            from {
+                opacity: 1
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        @keyframes fade {
+            from {
+                opacity: 1
+            }
+            to {
+                opacity: 1
+            }
+        }
+        
+        .footer-basic {
+            /* position: fixed;
+            left: 0;
+            bottom: 0; */
+            margin-top: 0px;
+            width: 100%;
+            padding: 20px 0;
+            background-color: #190073;
+            color: #ffffff;
+        }
+        
+        .footer-basic ul {
+            padding: 0;
+            list-style: none;
+            text-align: center;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 0;
+        }
+        
+        .footer-basic li {
+            padding: 0 10px;
+        }
+        
+        .footer-basic ul a {
+            color: #ffffff;
+            text-decoration: none;
+            opacity: 1;
+        }
+        
+        .footer-basic ul a:hover {
+            color: rgb(252, 152, 3);
+        }
+        
+        .footer-basic .social {
+            text-align: center;
+            padding-bottom: 10px;
+        }
+        
+        .footer-basic .social>a {
+            font-size: 24px;
+            width: 40px;
+            height: 40px;
+            line-height: 40px;
+            display: inline-block;
+            text-align: center;
+            margin: 0 8px;
+            color: inherit;
+            opacity: 0.75;
+        }
+        
+        .footer-basic .social>a:hover {
+            color: black;
+        }
+        
+        .footer-basic .copyright {
+            margin-top: 15px;
+            text-align: center;
+            font-size: 13px;
+            color: white;
+            margin-bottom: 0;
+        }
+        
+        .card_profile {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(252, 229, 101);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            height: 220px;
+            width: 100%;
+        }
+        
+        .float-container-new {
+            width: auto;
+        }
+        
+        .float-child-new {
+            width: 50%;
+            float: left;
+        }
+        
+        .edit_button {
+            padding: 5px;
+            background-color: rgb(69, 186, 253);
+            color: black;
+            border-radius: 10px;
+            border-color: rgb(221, 216, 216);
+        }
+        
+        .card_progress {
+            margin-top: 20px;
+            padding: 10px;
+            padding-left: 20px;
+            padding-right: 20px;
+            background-color: rgb(252, 229, 101);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            height: 220px;
+            width: 100%;
+        }
+        
+        .indiv_eval {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .card_eval {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(252, 229, 101);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            height: 220px;
+            width: 100%;
+        }
+        
+        .indiv_course {
+            display: flex;
+            justify-content: center;
+        }
+        
+        .card-course {
+            width: 300px;
+            height: 300px;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-left: 30px;
+            background-color: rgb(0, 0, 0);
+            border-radius: 20px;
+            box-shadow: 8px 8px 16px 16px rgba(0, 0, 0, 0.2);
+        }
+        
+        .indiv-image-card {
+            width: 300px;
+            height: 200px;
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+        }
+        
+        .card-details {
+            display: flex;
+            justify-content: space-between;
+        }
+        
+        .thumbnails {
+            box-shadow: 8px 8px 16px 16px rgba(0, 0, 0, 0.2);
+            border-radius: 20px;
+            background-color: rgb(177, 177, 177);
+            margin-bottom: 60px;
+            position: relative;
+        }
+        
+        .list-group-item {
+            text-align: center;
+        }
+        
+        .course-details {
+            text-align: center;
+        }
+        
+        .checked {
+            color: yellow;
+        }
+        
+        .card_course_details {
+            margin: 20px;
+            padding: 10px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+        }
+        
+        .float-container-new-course {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            text-align: justify;
+        }
+        /* .float-child-new-course {} */
+        
+        .vr {
+            border-right: 1px solid #000;
+            width: 1%;
+        }
+        
+        .card_eval_course {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            height: 180px;
+        }
+        
+        .test_course {
+            background-color: rgb(250, 117, 117);
+            border-radius: 5px;
+            margin-top: 10px;
+            margin: 5px;
+            padding: 5px;
+            padding: 5px 10px;
+        }
+        
+        .assg_course {
+            background-color: rgb(130, 252, 81);
+            border-radius: 5px;
+            margin-top: 10px;
+            margin: 5px;
+            padding: 5px 10px;
+        }
+        
+        .card_result_course {
+            margin-top: 10px;
+            padding: 20px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            height: 130px;
+        }
+        
+        .limiter {
+            width: 100%;
+            margin: 0 auto;
+        }
+        
+        .container-table100 {
+            width: 100%;
+            /* background: rgb(255, 255, 255); */
+            justify-content: center;
+            flex-wrap: wrap;
+            padding: 10px 10px;
+            margin-bottom: 20px;
+        }
+        
+        .wrap-table100 {
+            width: 1100px;
+            margin: 0 auto;
+        }
+        
+        table {
+            border-spacing: 1;
+            border-collapse: collapse;
+            background: #f5f5f5;
+            border-radius: 10px;
+            border-color: black;
+            border-style: solid;
+            overflow: hidden;
+            width: 100%;
+            margin: 0 auto;
+            position: relative;
+            box-shadow: black;
+        }
+        
+        table * {
+            position: relative;
+            color: black;
+        }
+        
+        table td,
+        table th {
+            padding-left: 8px;
+        }
+        
+        table thead tr {
+            height: 70px;
+            background: rgb(14, 1, 65);
+        }
+        
+        table tbody tr {
+            height: 60px;
+        }
+        
+        table tbody tr:last-child {
+            border: 0;
+        }
+        
+        table td,
+        table th {
+            text-align: left;
+        }
+        
+        table td.l,
+        table th.l {
+            text-align: right;
+        }
+        
+        table td.c,
+        table th.c {
+            text-align: center;
+        }
+        
+        table td.r,
+        table th.r {
+            text-align: center;
+        }
+        
+        .table100-head th {
+            font-family: OpenSans-Regular;
+            font-size: 16px;
+            color: #fff;
+            line-height: 1.2;
+            font-weight: unset;
+        }
+        
+        tbody tr {
+            background-color: white;
+        }
+        
+        tbody tr:nth-child(even) {
+            background-color: #e6e6e6;
+        }
+        
+        tbody tr {
+            font-family: OpenSans-Regular;
+            font-size: 14px;
+            color: #808080;
+            line-height: 1.2;
+            font-weight: unset;
+        }
+        
+        tbody tr:hover {
+            color: #fff;
+            background-color: #ee780a;
+            cursor: pointer;
+        }
+        
+        .column1 {
+            width: 50px;
+            padding-left: 20px;
+            text-align: center;
+        }
+        
+        .column2 {
+            width: 200px;
+            text-align: left;
+        }
+        
+        .column3 {
+            width: 100x;
+            text-align: center;
+        }
+        
+        .column4 {
+            width: 400px;
+            text-align: left;
+        }
+        
+        .column5 {
+            width: 100px;
+            text-align: center;
+        }
+        
+        .column6 {
+            width: 200px;
+            text-align: center;
+            padding-right: 10px;
+        }
+        
+        .column6 a:hover {
+            text-decoration: none;
+            color: #f5f5f5;
+        }
+        
+        .column6 a {
+            color: #190073;
+        }
+        
+        .option_filters {
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+            width: 73%;
+            margin-top: 20px;
+        }
+        
+        .options_duration {
+            display: flex;
+            justify-content: space-around;
+        }
+        
+        .duration_button {
+            background-color: #d6d0d0;
+            border-radius: 20px;
+            height: auto;
+            padding: 10px 20px;
+            color: black;
+        }
+        
+        .duration_button:hover {
+            cursor: pointer;
+            background-color: #a1a0a0;
+            color: white;
+        }
+        
+        .duration_button:hover {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #contact .card-contact:hover i,
+        #contact .card-contact:hover h4 {
+            color: #87d37c;
+        }
+        
+        .fix {
+            position: fixed;
+            left: 0;
+            bottom: 0;
+        }
+        
+        .card-contact {
+            padding: 20px;
+            border-radius: 20px;
+            margin-top: 50px;
+        }
+        
+        #reach {
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+        }
+        
+        #header-info,
+        #reach {
+            text-align: center;
+            width: 40%;
+            margin: auto;
+            background-color: rgb(252, 152, 3);
+            padding: 10px;
+        }
+        
+        #header-info {
+            border-top-left-radius: 20px;
+            border-top-right-radius: 20px;
+            padding-top: 15px;
+        }
+        
+        .notify {
+            position: absolute;
+            top: -40px;
+            right: -10px;
+            height: 60px;
+            width: 60px;
+        }
+        
+        .notify_text {
+            position: absolute;
+            top: -5px;
+            right: -28px;
+            height: 60px;
+            width: 60px;
+            color: white;
+        }
+        
+        .goto_course:hover {
+            text-decoration: none;
+            color: white;
+        }
+        
+        .goto_course {
+            color: white;
+        }
+        
+        .about_us {
+            width: 100%;
+            height: 50%;
+        }
+        
+        .tnc {
+            width: 70%;
+            margin: auto;
+            justify-content: space-between;
+            text-align: justify;
+        }
+        
+        .tnc h1 {
+            margin: auto;
+            display: table;
+            background-color: rgb(252, 152, 3);
+            padding: 10px 20px;
+            margin-bottom: 20px;
+            margin-top: 40px;
+            border-radius: 20px;
+            font-size: 25px;
+        }
+        
+        .tnc h2 {
+            font-size: 20px;
+        }
+        
+        .tnc p {
+            font-size: 16px;
+        }
+        
+        .contact-form {
+            background: #91e6f5;
+            width: 50%;
+            margin: auto;
+            border-radius: 20px;
+            margin-top: 80px;
+        }
+        
+        .contact-form .form-control {
+            border-radius: 1rem;
+        }
+        
+        .contact-form form {
+            padding: 10%;
+        }
+        
+        .contact-form form .row {
+            margin-bottom: -7%;
+        }
+        
+        .contact-form h3 {
+            margin-bottom: 8%;
+            margin-top: -10%;
+            text-align: center;
+            color: black;
+            font-size: 35px;
+        }
+        
+        .contact-form .btnContact {
+            width: 50%;
+            border: none;
+            border-radius: 1rem;
+            padding: 1.5%;
+            background-color: rgb(252, 152, 3);
+            font-weight: 600;
+            color: black;
+            cursor: pointer;
+        }
