@@ -86,20 +86,23 @@ echo $_SESSION['lName'];
                             <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Sign Up</h3>
                             <form action="Dashboard.html">
                                 <div class="form-group">
-                                    <input id="inputUsername" type="text" placeholder="Username" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <input name="fName" type="text" placeholder="First Name" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
                                 <div class="form-group">
-                                    <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <input name="lName" type="text" placeholder="Username" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group">
+                                    <input name="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
 
                                 <div class="form-group mb-3">
-                                    <input id="inputPhone" type="number" placeholder="Phone Number" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input name="inputPhone" type="number" placeholder="Phone Number" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input name="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input name="confirmPassword" type="password" placeholder="Confirm Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div style="display: flex; justify-content: space-between;" class="custom-control custom-radio mb-3">
                                     <div style="margin: 5px; margin-bottom: 10px; color: white;">
