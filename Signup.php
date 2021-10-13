@@ -1,9 +1,7 @@
 <?php
 
 session_start();
-echo $_SESSION['emailID'];
-echo $_SESSION['fName']; 
-echo $_SESSION['lName'];
+
 ?>
 
 <!DOCTYPE html>
@@ -34,7 +32,7 @@ echo $_SESSION['lName'];
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
@@ -79,11 +77,11 @@ echo $_SESSION['lName'];
 
 
             <div class='column'>
-                <div class='column_right'>
+                <div class='column_right' >
 
-                    <div class="card">
-                        <div class="container" style="width: 400px; ">
-                            <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Sign Up</h3>
+                    <div class="card" style="padding-top: 0px;">
+                        <div class="container" style="width: 400px;">
+                            <h3 class="display-4" style="text-align:center;margin-bottom: 10px; color: white;">Sign Up</h3>
                             <form action="Dashboard.html">
                                 <div class="form-group">
                                     <input name="fName" type="text" placeholder="First Name" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
@@ -133,21 +131,21 @@ echo $_SESSION['lName'];
         </div>
     </div>
 
-    <div class="footer-basic fix">
+    <div class="footer-basic">
         <footer>
             <div class="social">
                 <a href="#"><i style="color: rgb(107, 253, 107);" class="fa fa-whatsapp fa-fw"></i></a>
                 <a href="#"><i style="color: rgb(255, 134, 219);" class="fa fa-instagram fa-fw"></i></a>
                 <a href="#"><i style="color: rgb(255, 0, 34);" class="fa fa-google-plus fa-fw"></i></a>
                 <a href="#"><i style="color: rgb(110, 110, 255);" class="fa fa-facebook fa-fw"></i></a>
-                <a href="#"><i style="color: rgb(251, 255, 0);" class="fa fa-snapchat-ghost fa-fw"></i></a></div>
+                <a href="#"><i style="color: rgb(251, 255, 0);" class="fa fa-snapchat-ghost fa-fw"></i></a>
+            </div>
 
             <ul class="list-inline">
                 <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>
                 <li style="color: black" class="list-inline-item"><a href="Terms.html">Terms and Conditions</a></li>
                 <li style="color: black" class="list-inline-item"><a href="Privacy Policy.html">Privacy Policy</a></li>
             </ul>
-            <p class="copyright">WebCoursera © 2021</p>
         </footer>
     </div>
 </body>

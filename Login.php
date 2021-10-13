@@ -5,8 +5,8 @@ session_start();
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
 
-    $username = mysqli_real_escape_string($db, $_POST['inputEmail']);
-    $password = mysqli_real_escape_string($db, $_POST['inputPassword']);
+    $username = mysqli_real_escape_string($db, $_POST['emailID']);
+    $password = mysqli_real_escape_string($db, $_POST['password']);
 
 
     $sql = "SELECT * FROM user WHERE emailID = '$username' and password = '$password'";
@@ -18,10 +18,27 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     if($count==1){
+        $_SESSION['userID'] =  $row['userID'];
+        $_SESSION['phoneNo'] =  $row['phoneNo'];
+
         $_SESSION['emailID'] =  $row['emailID'];
         $_SESSION['fName'] =  $row['fName'];
         $_SESSION['lName'] =  $row['lName'];
-        header("location: Signup.php");
+
+        $_SESSION['html'] =  $row['html'];
+        $_SESSION['css'] =  $row['css'];
+        $_SESSION['php'] =  $row['php'];
+        $_SESSION['ajax'] =  $row['ajax'];
+        $_SESSION['java'] =  $row['java'];
+        $_SESSION['js'] =  $row['js'];
+
+        header("location: Dashboard.html");
+    }
+    else
+    {
+        echo '<script language="javascript">';
+        echo 'alert("Login Was Not Successful. Try Again!")';
+        echo '</script>';
     }
     
 
@@ -109,10 +126,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Login</h3>
                             <form method="POST">
                                 <div class="form-group">
-                                    <input id="inputEmail" name="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <input id="emailID" name="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="inputPassword" name="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input id="password" name="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input id="customCheck1" type="checkbox" checked class="custom-control-input">
