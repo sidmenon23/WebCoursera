@@ -1,6 +1,43 @@
 <?php
-
+include("config.php");
 session_start();
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // username and password sent from form 
+
+    $fName = mysqli_real_escape_string($db, $_POST['fName']);
+    $lName = mysqli_real_escape_string($db, $_POST['lName']);
+    $emailID = mysqli_real_escape_string($db, $_POST['inputEmail']);
+    $phoneNo = mysqli_real_escape_string($db, $_POST['inputPhone']);
+    $password = mysqli_real_escape_string($db, $_POST['inputPassword']);
+    $gender = mysqli_real_escape_string($db, $_POST['gender']);
+    $confirmPassword = mysqli_real_escape_string($db, $_POST['confirmPassword']);
+
+    echo $fName;
+    echo $lName;
+
+    if($password != $confirmPassword){
+        echo 'alert("Passwords do not match!")';
+    }
+
+    $sql = "SELECT * FROM user WHERE emailID = '$emailID'";
+    $result = mysqli_query($db, $sql);
+    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+    $count = mysqli_num_rows($result);
+    echo $count;
+
+    if($count == 1){
+        echo 'alert("This email is already registered!")';
+    }
+
+    else if($count == 0){
+        $id = uniqid(true);
+       // $sql = "INSERT INTO user(userID, emailID, fName, lName, password, phoneNo, gender)
+        //VALUES ($id, $emailID, $fName, $lName, $password, $phoneNo, $gender)";
+        $sql = "INSERT INTO user (userID, emailID, fName, lName, password, phoneNo, gender, html, css, js, java, python, ajax) 
+        VALUES ('$id', '$emailID', '$fName', '$lName', '$password', '$phoneNo', '$gender', '0', '0', '0', '0', '0', '0')";
+        $result = mysqli_query($db, $sql);
+        echo $result;
+    }}
 
 ?>
 
@@ -82,7 +119,7 @@ session_start();
                     <div class="card" style="padding-top: 0px;">
                         <div class="container" style="width: 400px;">
                             <h3 class="display-4" style="text-align:center;margin-bottom: 10px; color: white;">Sign Up</h3>
-                            <form action="Dashboard.html">
+                            <form method=POST>
                                 <div class="form-group">
                                     <input name="fName" type="text" placeholder="First Name" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
