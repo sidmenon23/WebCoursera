@@ -1,51 +1,3 @@
-<?php
-include("config.php");
-session_start();
-
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // username and password sent from form 
-
-    $username = mysqli_real_escape_string($db, $_POST['emailID']);
-    $password = mysqli_real_escape_string($db, $_POST['password']);
-
-
-    $sql = "SELECT * FROM user WHERE emailID = '$username' and password = '$password'";
-    
-    $result = mysqli_query($db, $sql);
-    $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
-
-    $count = mysqli_num_rows($result);
-
-    
-    if($count==1){
-        $_SESSION['userID'] =  $row['userID'];
-        $_SESSION['phoneNo'] =  $row['phoneNo'];
-
-        $_SESSION['emailID'] =  $row['emailID'];
-        $_SESSION['fName'] =  $row['fName'];
-        $_SESSION['lName'] =  $row['lName'];
-
-        $_SESSION['html'] =  $row['html'];
-        $_SESSION['css'] =  $row['css'];
-        $_SESSION['php'] =  $row['php'];
-        $_SESSION['ajax'] =  $row['ajax'];
-        $_SESSION['java'] =  $row['java'];
-        $_SESSION['js'] =  $row['js'];
-
-        header("location: Dashboard.html");
-    }
-    else
-    {
-        echo '<script language="javascript">';
-        echo 'alert("Login Was Not Successful. Try Again!")';
-        echo '</script>';
-    }
-    
-
-    }
-
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -58,9 +10,82 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
+
+
+    <?php
+    include("config.php");
+    session_start();
+
+    if ($_SERVER["REQUEST_METHOD"] == "POST") {
+        // username and password sent from form 
+
+        $username = mysqli_real_escape_string($db, $_POST['emailID']);
+        $password = mysqli_real_escape_string($db, $_POST['password']);
+
+
+        $sql = "SELECT * FROM user WHERE emailID = '$username' and password = '$password'";
+
+        $result = mysqli_query($db, $sql);
+        $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+
+        $count = mysqli_num_rows($result);
+
+
+        if ($count == 1) {
+            $_SESSION['userID'] =  $row['userID'];
+            $_SESSION['phoneNo'] =  $row['phoneNo'];
+
+            $_SESSION['emailID'] =  $row['emailID'];
+            $_SESSION['fName'] =  $row['fName'];
+            $_SESSION['lName'] =  $row['lName'];
+
+            $_SESSION['html'] =  $row['html'];
+            $_SESSION['css'] =  $row['css'];
+            $_SESSION['php'] =  $row['php'];
+            $_SESSION['ajax'] =  $row['ajax'];
+            $_SESSION['java'] =  $row['java'];
+            $_SESSION['js'] =  $row['js'];
+
+            header("location: Dashboard.html");
+        } else {
+            echo '<script>
+                    $(document).ready(function(){
+                        $("#myModal").modal(\'show\');
+                    });
+                </script>
+
+                <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Invalid Login Attempt</h4>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Incorrect Username or Password. User could not be authenticated.
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+
+                    </div>
+                </div>
+                </div>';
+        }
+    }
+
+    ?>
+
 
 
 
@@ -126,10 +151,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                             <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Login</h3>
                             <form method="POST">
                                 <div class="form-group">
-                                    <input id="emailID" name="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                    <input id="emailID" name="emailID" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
                                 </div>
                                 <div class="form-group mb-3">
-                                    <input id="password" name="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
+                                    <input id="password" name="password" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="custom-control custom-checkbox mb-3">
                                     <input id="customCheck1" type="checkbox" checked class="custom-control-input">
