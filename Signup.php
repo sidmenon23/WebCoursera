@@ -1,3 +1,11 @@
+<?php
+
+session_start();
+echo $_SESSION['emailID'];
+echo $_SESSION['fName']; 
+echo $_SESSION['lName'];
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -5,7 +13,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Signup</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
@@ -75,31 +83,42 @@
 
                     <div class="card">
                         <div class="container" style="width: 400px; ">
-                            <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Login</h3>
+                            <h3 class="display-4" style="text-align:center;margin-bottom: 20px; color: white;">Sign Up</h3>
                             <form action="Dashboard.html">
                                 <div class="form-group">
+                                    <input id="inputUsername" type="text" placeholder="Username" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+                                <div class="form-group">
                                     <input id="inputEmail" type="email" placeholder="Email address" required="" autofocus="" class="form-control rounded-pill border-0 shadow-sm px-4">
+                                </div>
+
+                                <div class="form-group mb-3">
+                                    <input id="inputPhone" type="number" placeholder="Phone Number" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
                                 <div class="form-group mb-3">
                                     <input id="inputPassword" type="password" placeholder="Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
-                                <div class="custom-control custom-checkbox mb-3">
-                                    <input id="customCheck1" type="checkbox" checked class="custom-control-input">
-                                    <label for="customCheck1" class="custom-control-label" style=" color: white;">Remember password</label>
+                                <div class="form-group mb-3">
+                                    <input id="confirmPassword" type="password" placeholder="Confirm Password" required="" class="form-control rounded-pill border-0 shadow-sm px-4 text-primary">
                                 </div>
-                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" style="background-color: rgb(252, 152, 3);">Sign in</button>
+                                <div style="display: flex; justify-content: space-between;" class="custom-control custom-radio mb-3">
+                                    <div style="margin: 5px; margin-bottom: 10px; color: white;">
+                                        Gender
+                                    </div>
+                                    <div style=" color: white;">
 
-                                <div style="height:40px">
-                                    <h4 class="display-4" style="text-align:center;margin-top: 25px; color: white;">OR</h4>
-
+                                        <input id="customRadio1" type="radio" name="gender" value="male">
+                                        <label style="padding-right: 10px;" for="customRadio1">Male</label>
+                                        <input id="customRadio2" type="radio" name="gender" value="female">
+                                        <label style="padding-right: 10px;" for="customRadio2">Female</label>
+                                        <input id="customRadio3" type="radio" name="gender" value="others">
+                                        <label for="customRadio3">Others</label>
+                                    </div>
                                 </div>
-                                <a href="Dashboard.html" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm facebook">
-                                    <i class="fa fa-facebook fa-fw"></i> Login with Facebook
-                                </a>
+                                <button type="submit" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm" style="background-color: rgb(252, 152, 3);">Sign Up</button>
 
-                                <a href="Dashboard.html" class="google btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm " style="background-color: rgb(247, 78, 78);">
-                                    <i class="fa fa-google fa-fw"></i> Login with Google+
-                                </a>
+
+
 
                             </form>
                         </div>
