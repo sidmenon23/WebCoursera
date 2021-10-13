@@ -98,8 +98,8 @@
                 <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>

@@ -1,3 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signup</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+
+<body>
+
 <?php
 include("config.php");
 session_start();
@@ -16,7 +34,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $lName;
 
     if($password != $confirmPassword){
-        echo 'alert("Passwords do not match!")';
+        echo '<script>
+                    $(document).ready(function(){
+                        $("#myModal").modal(\'show\');
+                    });
+                </script>
+
+                <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Invalid Registration Attempt</h4>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        Passwords do not match. User could not be registered.
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+
+                    </div>
+                </div>
+                </div>';
     }
 
     $sql = "SELECT * FROM user WHERE emailID = '$emailID'";
@@ -26,13 +71,38 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     echo $count;
 
     if($count == 1){
-        echo 'alert("This email is already registered!")';
+        echo '<script>
+                    $(document).ready(function(){
+                        $("#myModal").modal(\'show\');
+                    });
+                </script>
+
+                <div class="modal" id="myModal">
+                <div class="modal-dialog">
+                    <div class="modal-content">
+
+                    <!-- Modal Header -->
+                    <div class="modal-header">
+                        <h4 class="modal-title">Duplicate Registration Attempt</h4>
+                    </div>
+
+                    <!-- Modal body -->
+                    <div class="modal-body">
+                        This email has already been registered. Please try registering with another email.
+                    </div>
+
+                    <!-- Modal footer -->
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                    </div>
+
+                    </div>
+                </div>
+                </div>';
     }
 
     else if($count == 0){
         $id = uniqid(true);
-       // $sql = "INSERT INTO user(userID, emailID, fName, lName, password, phoneNo, gender)
-        //VALUES ($id, $emailID, $fName, $lName, $password, $phoneNo, $gender)";
         $sql = "INSERT INTO user (userID, emailID, fName, lName, password, phoneNo, gender, html, css, js, java, python, ajax) 
         VALUES ('$id', '$emailID', '$fName', '$lName', '$password', '$phoneNo', '$gender', '0', '0', '0', '0', '0', '0')";
         $result = mysqli_query($db, $sql);
@@ -40,24 +110,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }}
 
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Signup</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-</head>
-
-<body>
-
-
 
     <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
@@ -68,8 +120,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
