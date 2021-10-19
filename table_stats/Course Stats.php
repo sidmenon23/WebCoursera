@@ -144,6 +144,24 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 			</div>
 		</div>
 	</div>
+	<div class="footer-basic fix">
+        <footer>
+            <div class="social">
+                <a href="#"><i style="color: rgb(107, 253, 107);" class="fa fa-whatsapp fa-fw"></i></a>
+                <a href="#"><i style="color: rgb(255, 134, 219);" class="fa fa-instagram fa-fw"></i></a>
+                <a href="#"><i style="color: rgb(255, 0, 34);" class="fa fa-google-plus fa-fw"></i></a>
+                <a href="#"><i style="color: rgb(110, 110, 255);" class="fa fa-facebook fa-fw"></i></a>
+                <a href="#"><i style="color: rgb(251, 255, 0);" class="fa fa-snapchat-ghost fa-fw"></i></a>
+            </div>
+
+            <ul class="list-inline">
+                <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>
+                <li style="color: black" class="list-inline-item"><a href="Terms.html">Terms and Conditions</a></li>
+                <li style="color: black" class="list-inline-item"><a href="Privacy Policy.html">Privacy Policy</a></li>
+            </ul>
+            <p class="copyright">WebCoursera © 2021</p>
+        </footer>
+    </div>
 </body>
 <script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>
 </html>
