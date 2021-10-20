@@ -15,24 +15,13 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Couurse Statistics</title>
-	<!-- <link rel="stylesheet" href="../styles.css"> -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 
-<!--===============================================================================================-->	
-<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/perfect-scrollbar/perfect-scrollbar.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
@@ -43,14 +32,14 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
             <ul class="nav navbar-nav ">
-                <li><a class="nav-bar-header" href="Dashboard.html" style="font-size: 25px;">WebCoursera</a></li>
-                <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Contact.html">Contact Us</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
+                <li><a class="nav-bar-header" href="../Dashboard.html" style="font-size: 25px;">WebCoursera</a></li>
+                <li class="activate nav-bar-header"><a class="nav-bar-header" href="../About Us.html">About Us</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="../Contact.html">Contact Us</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="../All Courses.html">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="../Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="../Login.php"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
             </ul>
         </div>
     </nav>
@@ -155,9 +144,9 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
             </div>
 
             <ul class="list-inline">
-                <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>
-                <li style="color: black" class="list-inline-item"><a href="Terms.html">Terms and Conditions</a></li>
-                <li style="color: black" class="list-inline-item"><a href="Privacy Policy.html">Privacy Policy</a></li>
+                <li style="color: black" class="list-inline-item"><a href="../Help.html">Help and Support</a></li>
+                <li style="color: black" class="list-inline-item"><a href="../Terms.html">Terms and Conditions</a></li>
+                <li style="color: black" class="list-inline-item"><a href="../Privacy Policy.html">Privacy Policy</a></li>
             </ul>
             <p class="copyright">WebCoursera © 2021</p>
         </footer>
