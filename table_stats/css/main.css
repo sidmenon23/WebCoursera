@@ -124,6 +124,11 @@ table {
     background-color: #fff;
 }
 
+th {
+    position: sticky;
+    top: 0;
+}
+
 th,
 td {
     font-weight: unset;

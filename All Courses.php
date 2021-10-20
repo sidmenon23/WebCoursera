@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -14,6 +18,101 @@
 </head>
 
 <body>
+
+
+    <?php
+    include("config.php");
+    function add_user()
+    {
+
+        $id = $_SESSION['userID'];
+
+        if ($_GET['click'] == 'css') {
+
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+
+            $sql = "INSERT INTO css (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `css` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['css']=1;
+        }
+
+        if ($_GET['click'] == 'html') {
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+            $sql = "INSERT INTO html (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `html` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['html'] = 1;
+
+        }
+
+        if ($_GET['click'] == 'ajax') {
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+            $sql = "INSERT INTO ajax (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `ajax` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['ajax'] = 1;
+        }
+
+
+        if ($_GET['click'] == 'python') {
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+            $sql = "INSERT INTO python (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `python` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['python'] = 1;
+        }
+
+
+        if ($_GET['click'] == 'java') {
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+            $sql = "INSERT INTO java (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `java` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['java'] = 1;
+        }
+
+
+        if ($_GET['click'] == 'js') {
+            $courses = '[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]';
+            $sql = "INSERT INTO js (userID, progress) 
+            VALUES ('$id', '$courses')";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+
+            $sql = "UPDATE `user` SET `js` = '1' 
+            WHERE `user`.`userID` = '$id'";
+            $result = mysqli_query($GLOBALS['db'], $sql);
+            $_SESSION['js'] = 1;
+        }
+    }
+    if (isset($_GET['click'])) {
+        add_user();
+    }
+
+
+    ?>
+
+
     <nav class="navbar-inverse">
         <div class="nav-bar container-fluid ">
             <ul class="nav navbar-nav ">
@@ -32,7 +131,7 @@
                     </ul>
                 </li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.html"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in" ></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
             </ul>
         </div>
     </nav>
@@ -72,7 +171,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course HTML.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course HTML.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -102,7 +201,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course CSS.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=css" class="btn btn-primary " role="button ">Enroll</a> <a href="Course CSS.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -140,7 +239,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course JS.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=js" class="btn btn-primary " role="button ">Enroll</a> <a href="Course JS.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -172,7 +271,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Python.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=python" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Python.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -203,7 +302,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course AJAX.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=ajax" class="btn btn-primary " role="button ">Enroll</a> <a href="Course AJAX.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -241,7 +340,7 @@
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="Login.html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Java.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=java" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Java.html" class="btn btn-default " role="button ">View More</a></p>
                     </div>
                 </div>
             </div>
@@ -261,7 +360,8 @@
                 <a href="# "><i style="color: rgb(255, 134, 219); " class="fa fa-instagram fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(255, 0, 34); " class="fa fa-google-plus fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(110, 110, 255); " class="fa fa-facebook fa-fw "></i></a>
-                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a></div>
+                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a>
+            </div>
 
             <ul class="list-inline">
                 <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>

@@ -67,7 +67,8 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 						<tbody>
 						<?php
 							$i = 1;
-							foreach($rows as $row){ 
+							for ($x = 0; $x <= 30; $x++) {
+									foreach($rows as $row){ 
 						?>
 							<tr class="row100">
 								<td class="column100 column0" ><?php echo $i; ?></td>
@@ -126,6 +127,7 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 						<?php
 						$i++;	
 						}
+					}
 							?>
 						</tbody>
 					</table>

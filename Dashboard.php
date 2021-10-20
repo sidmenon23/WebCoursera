@@ -15,7 +15,10 @@
 
 <body>
 
-
+    <?php
+    include("config.php");
+    session_start();
+    ?>
 
     <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
@@ -32,7 +35,7 @@
                         <button style="background-color: rgb(228, 224, 224); border-radius: 10px; margin-left: 6px; margin-top: 12px; margin-right: 10px;" class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
                     </form>
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
             </ul>
@@ -125,59 +128,109 @@
     <div class="indiv_course ">
 
 
-        <div class="card-course ">
+        <div class="card-course " <?php if ($_SESSION['html'] == 0) { ?>style="display:none" <?php } ?>>
+
             <img src="courses_logo/html.png" class="indiv-image-card ">
             <div class='card-details' style="margin-left: 20px ">
 
                 <div class="card-data ">
                     <h3 style="color: white ">HTML</h3>
-                    <p style="color: white ">Andrew NG</p>
+                    <p style="color: white ">Mosh</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
                     <a class="goto_course" href="Course HTML.html">
                         <p style="font-size: 20px; margin-top: 2px ">
-                        Continue
+                            Continue
                         </p>
-                     </a>
+                    </a>
                 </button>
             </div>
-
         </div>
-        <div class="card-course ">
+        <div class="card-course " <?php if ($_SESSION['css'] == 0) { ?>style="display:none" <?php } ?>>
             <img src="courses_logo/css.png" class="indiv-image-card ">
             <div class='card-details' style="margin-left: 20px ">
 
                 <div class="card-data ">
                     <h3 style="color: white ">CSS</h3>
-                    <p style="color: white ">Mick Fring</p>
+                    <p style="color: white ">Michael</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
                     <a class="goto_course" href="Course CSS.html">
                         <p style="font-size: 20px; margin-top: 2px ">
-                        Continue
+                            Continue
                         </p>
-                     </a>                </button>
+                    </a> </button>
             </div>
 
 
         </div>
-        <div class="card-course ">
+        <div class="card-course " <?php if ($_SESSION['python'] == 0) { ?>style="display:none" <?php } ?>>
             <img src="courses_logo/python.png " class="indiv-image-card ">
             <div class='card-details' style="margin-left: 20px ">
 
                 <div class="card-data ">
                     <h3 style="color: white ">Python</h3>
-                    <p style="color: white ">Mosh</p>
+                    <p style="color: white ">Surya</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
                     <a class="goto_course" href="Course Python.html">
                         <p style="font-size: 20px; margin-top: 2px ">
-                        Continue
+                            Continue
                         </p>
                     </a>
                 </button>
             </div>
+        </div>
+        <div class="card-course " <?php if ($_SESSION['js'] == 0) { ?>style="display:none" <?php } ?>>
+            <img src="courses_logo/javascript.png " class="indiv-image-card ">
+            <div class='card-details' style="margin-left: 20px ">
 
+                <div class="card-data ">
+                    <h3 style="color: white ">Javascript</h3>
+                    <p style="color: white ">Sarah</p>
+                </div>
+                <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
+                    <a class="goto_course" href="Course JS.html">
+                        <p style="font-size: 20px; margin-top: 2px ">
+                            Continue
+                        </p>
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card-course " <?php if ($_SESSION['ajax'] == 0) { ?>style="display:none" <?php } ?>>
+            <img src="courses_logo/ajax.png " class="indiv-image-card ">
+            <div class='card-details' style="margin-left: 20px ">
+
+                <div class="card-data ">
+                    <h3 style="color: white ">Ajax</h3>
+                    <p style="color: white ">Christopher</p>
+                </div>
+                <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
+                    <a class="goto_course" href="Course AJAX.html">
+                        <p style="font-size: 20px; margin-top: 2px ">
+                            Continue
+                        </p>
+                    </a>
+                </button>
+            </div>
+        </div>
+        <div class="card-course " <?php if ($_SESSION['java'] == 0) { ?>style="display:none" <?php } ?>>
+            <img src="courses_logo/java.png " class="indiv-image-card ">
+            <div class='card-details' style="margin-left: 20px ">
+
+                <div class="card-data ">
+                    <h3 style="color: white ">Java</h3>
+                    <p style="color: white ">Abel</p>
+                </div>
+                <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
+                    <a class="goto_course" href="Course Java.html">
+                        <p style="font-size: 20px; margin-top: 2px ">
+                            Continue
+                        </p>
+                    </a>
+                </button>
+            </div>
 
         </div>
 
@@ -192,7 +245,8 @@
                 <a href="# "><i style="color: rgb(255, 134, 219); " class="fa fa-instagram fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(255, 0, 34); " class="fa fa-google-plus fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(110, 110, 255); " class="fa fa-facebook fa-fw "></i></a>
-                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a></div>
+                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a>
+            </div>
 
             <ul class="list-inline">
                 <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>

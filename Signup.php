@@ -30,8 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $gender = mysqli_real_escape_string($db, $_POST['gender']);
     $confirmPassword = mysqli_real_escape_string($db, $_POST['confirmPassword']);
 
-    echo $fName;
-    echo $lName;
+
 
     if($password != $confirmPassword){
         echo '<script>
@@ -68,7 +67,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
     $count = mysqli_num_rows($result);
-    echo $count;
 
     if($count == 1){
         echo '<script>
@@ -195,13 +193,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                                     <div style="margin: 5px; margin-bottom: 10px; color: white;">
                                         Gender
                                     </div>
-                                    <div style=" color: white;">
+                                    <div style=" color: white;" >
 
-                                        <input id="customRadio1" type="radio" name="gender" value="male">
+                                        <input id="customRadio1" type="radio" name="gender" value="Male" checked>
                                         <label style="padding-right: 10px;" for="customRadio1">Male</label>
-                                        <input id="customRadio2" type="radio" name="gender" value="female">
+                                        <input id="customRadio2" type="radio" name="gender" value="Female">
                                         <label style="padding-right: 10px;" for="customRadio2">Female</label>
-                                        <input id="customRadio3" type="radio" name="gender" value="others">
+                                        <input id="customRadio3" type="radio" name="gender" value="Others">
                                         <label for="customRadio3">Others</label>
                                     </div>
                                 </div>

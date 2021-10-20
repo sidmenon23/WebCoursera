@@ -46,12 +46,13 @@
 
             $_SESSION['html'] =  $row['html'];
             $_SESSION['css'] =  $row['css'];
-            $_SESSION['php'] =  $row['php'];
+            $_SESSION['python'] =  $row['python'];
             $_SESSION['ajax'] =  $row['ajax'];
             $_SESSION['java'] =  $row['java'];
             $_SESSION['js'] =  $row['js'];
 
-            header("location: Dashboard.html");
+            
+            header("location: Dashboard.php");
         } else {
             echo '<script>
                     $(document).ready(function(){
@@ -166,11 +167,11 @@
                                     <h4 class="display-4" style="text-align:center;margin-top: 25px; color: white;">OR</h4>
 
                                 </div>
-                                <a href="Dashboard.html" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm facebook">
+                                <a href="Dashboard.php" class="btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm facebook">
                                     <i class="fa fa-facebook fa-fw"></i> Login with Facebook
                                 </a>
 
-                                <a href="Dashboard.html" class="google btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm " style="background-color: rgb(247, 78, 78);">
+                                <a href="Dashboard.php" class="google btn btn-primary btn-block text-uppercase mb-2 rounded-pill shadow-sm " style="background-color: rgb(247, 78, 78);">
                                     <i class="fa fa-google fa-fw"></i> Login with Google+
                                 </a>
 
