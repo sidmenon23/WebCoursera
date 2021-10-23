@@ -7,7 +7,13 @@ $sql = "SELECT * FROM user WHERE admin = 0";
 $result = mysqli_query($db,$sql);
 $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
+if (isset($_POST['delete'])) {
+	$email = mysqli_real_escape_string($db,$_POST['email']);
+	$sql_del =" DELETE FROM user WHERE emailID = '$email' ";
+	$result1 = mysqli_query($db,$sql_del);
+	header("location: Course Stats.php");
 
+}
 
 ?>
 
@@ -64,6 +70,12 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver6 m-b-110">
+					<div>
+						<form action="Course Stats.php" method="POST">
+							<input type="email" name="email" placeholder="Enter the Email ID">	
+							<input type="submit" name="delete" value="Delete User">
+						</form>
+					</div>
 					<table data-vertable="ver6" class="sortable" id="page">
 						<thead>
 							<tr class="row100 head">
@@ -77,7 +89,6 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 								<th class="column100 column4" >JavaScript</th>
 								<th class="column100 column4" >Java</th>
 								<th class="column100 column4" >AJAX</th>
-								<th class="column100 column4" >Delete</th>	
 							</tr>
 						</thead>
 						<tbody>
@@ -139,7 +150,6 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 									echo "Registered";
 								}
 								 ?></td>
-								<td><a href="delete.php?id=<?php echo $row['emailID']; ?>">Delete User</a></td>
 							</tr>
 						<?php
 						$i++;	
