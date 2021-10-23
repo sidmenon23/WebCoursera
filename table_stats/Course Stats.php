@@ -7,6 +7,8 @@ $sql = "SELECT * FROM user WHERE admin = 0";
 $result = mysqli_query($db,$sql);
 $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
+
+
 ?>
 
 <!DOCTYPE html>
@@ -14,7 +16,7 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Couurse Statistics</title>
+    <title>Course Statistics</title>
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -24,7 +26,20 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/page.css">
 <!--===============================================================================================-->
+    <script type="text/javascript" language="javascript" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script type="text/javascript" language="javascript" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.18/b-1.5.4/b-html5-1.5.4/r-2.2.2/datatables.min.js"></script>
+
+<script type="text/javascript">
+        $(document).ready(function() {
+            $('#page').dataTable({
+                responsive: "true",
+            });
+        }); 
+</script>
+
 
 </head>
 <body>
@@ -49,7 +64,7 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver6 m-b-110">
-					<table data-vertable="ver6" class="sortable">
+					<table data-vertable="ver6" class="sortable" id="page">
 						<thead>
 							<tr class="row100 head">
 								<th class="column100 column0" >UID</th>
@@ -62,6 +77,7 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 								<th class="column100 column4" >JavaScript</th>
 								<th class="column100 column4" >Java</th>
 								<th class="column100 column4" >AJAX</th>
+								<th class="column100 column4" >Delete</th>	
 							</tr>
 						</thead>
 						<tbody>
@@ -123,6 +139,7 @@ $rows = mysqli_fetch_all($result,MYSQLI_ASSOC);
 									echo "Registered";
 								}
 								 ?></td>
+								<td><a href="delete.php?id=<?php echo $row['emailID']; ?>">Delete User</a></td>
 							</tr>
 						<?php
 						$i++;	
