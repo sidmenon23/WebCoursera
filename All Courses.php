@@ -38,7 +38,7 @@ session_start();
             $sql = "UPDATE `user` SET `css` = '1' 
             WHERE `user`.`userID` = '$id'";
             $result = mysqli_query($GLOBALS['db'], $sql);
-            $_SESSION['css']=1;
+            $_SESSION['css'] = 1;
         }
 
         if ($_GET['click'] == 'html') {
@@ -51,7 +51,6 @@ session_start();
             WHERE `user`.`userID` = '$id'";
             $result = mysqli_query($GLOBALS['db'], $sql);
             $_SESSION['html'] = 1;
-
         }
 
         if ($_GET['click'] == 'ajax') {
@@ -171,12 +170,14 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=html" class="btn btn-primary " role="button ">Enroll</a> <a href="Course HTML.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=html" class="btn btn-primary " role="button " <?php if ($_SESSION['html'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course HTML.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>
 
-            <div class="col-sm-6 col-md-4">
+            <div class=" col-sm-6 col-md-4">
                 <div class="thumbnails" style="width: 35rem;">
                     <img src="courses_logo/css.png" style="width: 35rem; height: 25rem;border-top-left-radius: 20px; border-top-right-radius: 20px;">
                     <div class="caption">
@@ -201,7 +202,9 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=css" class="btn btn-primary " role="button ">Enroll</a> <a href="Course CSS.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=css" class="btn btn-primary " role="button " <?php if ($_SESSION['css'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course CSS.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -239,7 +242,9 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=js" class="btn btn-primary " role="button ">Enroll</a> <a href="Course JS.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=js" class="btn btn-primary " role="button " <?php if ($_SESSION['js'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course JS.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -271,7 +276,9 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=python" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Python.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=python" class="btn btn-primary " role="button " <?php if ($_SESSION['python'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course Python.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -302,7 +309,9 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=ajax" class="btn btn-primary " role="button ">Enroll</a> <a href="Course AJAX.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=ajax" class="btn btn-primary " role="button " <?php if ($_SESSION['ajax'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course AJAX.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>
@@ -340,7 +349,9 @@ session_start();
                             </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;"><a style="margin-right: 20px;" href="All Courses.php?click=java" class="btn btn-primary " role="button ">Enroll</a> <a href="Course Java.html" class="btn btn-default " role="button ">View More</a></p>
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                            <a href="All Courses.php?click=java" class="btn btn-primary " role="button " <?php if ($_SESSION['java'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course Java.html" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
+                        </p>
                     </div>
                 </div>
             </div>

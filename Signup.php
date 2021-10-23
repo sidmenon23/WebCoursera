@@ -19,6 +19,12 @@
 <?php
 include("config.php");
 session_start();
+
+
+
+
+
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // username and password sent from form 
 
@@ -100,11 +106,34 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     else if($count == 0){
+
+        
+
         $id = uniqid(true);
+        $options = ['cost' => 12,];
+        $hashed = password_hash($password, PASSWORD_DEFAULT, $options);
+
         $sql = "INSERT INTO user (userID, emailID, fName, lName, password, phoneNo, gender, html, css, js, java, python, ajax) 
-        VALUES ('$id', '$emailID', '$fName', '$lName', '$password', '$phoneNo', '$gender', '0', '0', '0', '0', '0', '0')";
+        VALUES ('$id', '$emailID', '$fName', '$lName', '$hashed', '$phoneNo', '$gender', '0', '0', '0', '0', '0', '0')";
         $result = mysqli_query($db, $sql);
-        echo $result;
+
+        $_SESSION['userID'] =  $id;
+        $_SESSION['phoneNo'] =  $phoneNo;
+
+        $_SESSION['emailID'] =  $emailID;
+        $_SESSION['fName'] =  $fName;
+        $_SESSION['lName'] =  $lName;
+
+        $_SESSION['html'] =  0;
+        $_SESSION['css'] =  0;
+        $_SESSION['python'] =  0;
+        $_SESSION['ajax'] =  0;
+        $_SESSION['java'] =  0;
+        $_SESSION['js'] =  0;
+
+
+        header("location: Dashboard.php");
+  
     }}
 
 ?>

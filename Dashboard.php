@@ -54,10 +54,10 @@
                         solid; ">
                         </div>
                         <div class="float-child-new mt-3 d-flex flex-column align-items-center text-center ">
-                            <h3>Mathew Jose</h3>
+                            <h3> <?php echo $_SESSION['fName'], " ", $_SESSION['lName']; ?> </h3>
                             <p style="margin-bottom:5px ">Student</p>
-                            <p style="margin-bottom:5px ">mathewjose2409@gmail.com</p>
-                            <p style="margin-bottom:5px ">+91 79024 72359</p>
+                            <p style="margin-bottom:5px "><?php echo $_SESSION['emailID']; ?></p>
+                            <p style="margin-bottom:5px "><?php echo $_SESSION['phoneNo']; ?></p>
                             <button class='edit_button'>Edit Details</button>
                         </div>
                     </div>
@@ -238,7 +238,7 @@
 
 
 
-    <div class="footer-basic ">
+    <div class="footer-basic " style="margin-top: 100px;">
         <footer>
             <div class="social ">
                 <a href="# "><i style="color: rgb(107, 253, 107); " class="fa fa-whatsapp fa-fw "></i></a>

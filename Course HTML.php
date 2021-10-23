@@ -15,6 +15,37 @@
 </head>
 
 <body>
+
+
+    <?php
+    include("config.php");
+    session_start();
+    function remove_user()
+    {
+        $id = $_SESSION['userID'];
+
+        $sql = "DELETE FROM html 
+            WHERE `user`.`userID` = '$id'";;
+        $result = mysqli_query($GLOBALS['db'], $sql);
+
+        $sql = "UPDATE `user` SET `html` = '0' 
+            WHERE `user`.`userID` = '$id'";
+        $result = mysqli_query($GLOBALS['db'], $sql);
+        $_SESSION['html'] = 0;
+        header("location: Dashboard.php");
+
+    }
+
+
+    if (isset($_GET['click'])) {
+        remove_user();
+    }
+
+
+
+    ?>
+
+
     <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
             <ul class="nav navbar-nav ">
@@ -31,7 +62,7 @@
                         <button style="background-color: rgb(228, 224, 224); border-radius: 10px; margin-left: 6px; margin-top: 12px; margin-right: 10px;" class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
                     </form>
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
             </ul>
@@ -232,14 +263,40 @@
     </div>
 
 
-    <div class="footer-basic ">
+    <fieldset style="margin:auto; width:50%; padding-left:10%;">
+        <div>
+            <input type="checkbox" id="end_check" onclick="myFunction()">
+            <label for="end_check" style="width: 80%; padding-left:10px; display:inline-block; vertical-align:top;">
+                I have finished watching all videos and wish to end the course. I understand that once my end the course, I will not be able to access the course materials again until I re-register for the course.</label>
+
+
+            <button type="button" onclick="location.href='Course HTML.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;">De - Enroll From The Course</button>
+
+
+            <script>
+                function myFunction() {
+                    var checkBox = document.getElementById("end_check");
+                    var text = document.getElementById("cancel");
+                    if (checkBox.checked == true) {
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                    }
+                }
+            </script>
+
+        </div>
+    </fieldset>
+
+    <div class="footer-basic " style="margin-top: 30px;">
         <footer>
             <div class="social ">
                 <a href="# "><i style="color: rgb(107, 253, 107); " class="fa fa-whatsapp fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(255, 134, 219); " class="fa fa-instagram fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(255, 0, 34); " class="fa fa-google-plus fa-fw "></i></a>
                 <a href="# "><i style="color: rgb(110, 110, 255); " class="fa fa-facebook fa-fw "></i></a>
-                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a></div>
+                <a href="# "><i style="color: rgb(251, 255, 0); " class="fa fa-snapchat-ghost fa-fw "></i></a>
+            </div>
 
             <ul class="list-inline">
                 <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>

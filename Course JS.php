@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AJAX Course</title>
+    <title>JavaScript Course</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css" integrity="sha384-HSMxcRTRxnN+Bdg0JdbxYKrThecOKuH5zCYotlSAcp1+c8xmyTe9GYg1l9a69psu" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
@@ -15,11 +15,40 @@
 </head>
 
 <body>
+
+    <?php
+    include("config.php");
+    session_start();
+    function remove_user()
+    {
+        $id = $_SESSION['userID'];
+
+        $sql = "DELETE FROM js 
+            WHERE `user`.`userID` = '$id'";;
+        $result = mysqli_query($GLOBALS['db'], $sql);
+
+        $sql = "UPDATE `user` SET `js` = '0' 
+            WHERE `user`.`userID` = '$id'";
+        $result = mysqli_query($GLOBALS['db'], $sql);
+        $_SESSION['js'] = 0;
+        header("location: Dashboard.php");
+    }
+
+
+    if (isset($_GET['click'])) {
+        remove_user();
+    }
+
+
+
+    ?>
+
+
     <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
             <ul class="nav navbar-nav ">
                 <li><a class="nav-bar-header" href="Dashboard.html" style="font-size: 25px;">WebCoursera</a></li>
-                <li class="activate nav-bar-header"><a class="nav-bar-header" href="Course AJAX.html">AJAX</a></li>
+                <li class="activate nav-bar-header"><a class="nav-bar-header" href="Course JS.html">JavaScript</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Contact.html">Contact Us</a></li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
@@ -31,7 +60,7 @@
                         <button style="background-color: rgb(228, 224, 224); border-radius: 10px; margin-left: 6px; margin-top: 12px; margin-right: 10px;" class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
                     </form>
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out" ></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
             </ul>
@@ -46,17 +75,18 @@
                     <div class="card-body">
                         <div class="float-container-new-course border-line">
                             <div class="float-child-new-course" style="width:20%; text-align: center;">
-                                <img src="courses_icon/ajax.png" alt="Admin" class="rounded-circle" width="150px" height="150px" style="margin-top:25px; background-color: white; border-width: 1px; border-color: black; border-style: solid; border-radius: 20px;">
-                                <h3 style="margin-top: 20px; ">AJAX</h3>
-                                <p>Instructor: Christopher</p>
+                                <img src="courses_icon/javascript.png" alt="Admin" class="rounded-circle" width="150px" height="150px" style="margin-top:25px; background-color: white; border-width: 1px; border-color: black; border-style: solid; border-radius: 20px;">
+                                <h3 style="margin-top: 20px; ">JavaScript</h3>
+                                <p>Instructor: Sarah</p>
 
                             </div>
                             <div class="vr">
                             </div>
                             <div class="float-child-new-course" style="width:40%; padding:15px">
                                 <h4>Course Details</h4>
-                                <p>AJAX stands for Asynchronous JavaScript and XML. AJAX is a new technique for creating better, faster, and more interactive web applications with the help of XML, HTML, CSS, and Java Script. AJAX uses XHTML for content,
-                                    CSS for presentation, along with Document Object Model and JavaScript for dynamic content display.
+                                <p>The JavaScript Specialist course focuses on the fundamental concepts of the JavaScript language. This course will empower you with the skills to design client-side, platform-independent solutions that greatly increase the
+                                    value of your Web site by providing interactivity and interest. You will learn how to use JavaScript to communicate with users, modify the Document Object Model (DOM), control program flow, validate forms and communicate
+                                    with databases.
                                 </p>
                             </div>
                             <div class="vr">
@@ -64,9 +94,9 @@
                             <div class="float-child-new-course" style="width:40%;">
                                 <h4 style="margin-left: 15px; margin-top: 25px;">References</h4>
                                 <ol style="margin-right: 10px;">
-                                    <li>Ajax A new programming model for the Web Author(s): Juan M. Gimeno, Josep M. Ribo</li>
+                                    <li>A Smarter Way to Learn JavaScript: The new tech-assisted approach that requires half the effort Author – Mark Myers Latest Edition – 1st Edition Publisher – CreateSpace Independent Publishing Platform</li>
                                     <br>
-                                    <li>AJAX and JSON with jQuery, JSON and the usage of AJAX and JSON with jQuery. Author(s): MIT</li>
+                                    <li>JavaScript & JQuery: Interactive Front-End Web Development Author – Jon Duckett Latest Edition – 1st Edition Publisher – Wiley</li>
                                     <br>
                                 </ol>
                             </div>
@@ -85,11 +115,11 @@
                             </h4>
 
                             <div class="indiv_eval test_course">
-                                <h5>AJAX - Mid Evaluation</h5>
+                                <h5>JavaScript - Mid Evaluation</h5>
                                 <h5>24th September, 2021</h5>
                             </div>
                             <div class="indiv_eval assg_course">
-                                <h5>AJAX - Excercise 15</h5>
+                                <h5>Javascript - Excercise 15</h5>
                                 <h5>28st September, 2021</h5>
                             </div>
                         </div>
@@ -105,7 +135,7 @@
                             </h4>
 
                             <div class="indiv_eval assg_course">
-                                <h5>AJAX - Assignment 1</h5>
+                                <h5>JavaScript - Assignment 1</h5>
                                 <h4>25 / 40</h4>
                             </div>
 
@@ -120,17 +150,18 @@
     <div class="option_filters">
         <div class="options_duration" style="width: 25%">
 
-            <a class="duration_button" href="course AJAX/Course AJAX Short.html">Short</a>
-            <a class="duration_button" href="course AJAX/Course AJAX Medium.html ">Medium</a>
-            <a class="duration_button" href="course AJAX/Course AJAX Long.html ">Long</a>
+            <a class="duration_button" href="course JS/Course JS Short.html ">Short</a>
+            <a class="duration_button" href="course JS/Course JS Medium.html ">Medium</a>
+            <a class="duration_button" href="course JS/Course JS Long.html ">Long</a>
         </div>
 
         <div class="options_duration" style="width: 25% ">
-            <a class="duration_button" href="course AJAX/Course AJAX Week 1.html">Week 1</a>
-            <a class="duration_button" href="course AJAX/Course AJAX Week 2.html">Week 2</a>
-            <a class="duration_button" href="course AJAX/Course AJAX Week 3.html">Week 3</a>
+            <a class="duration_button" href="course JS/Course JS Week 1.html">Week 1</a>
+            <a class="duration_button" href="course JS/Course JS Week 2.html">Week 2</a>
+            <a class="duration_button" href="course JS/Course JS Week 3.html">Week 3</a>
         </div>
     </div>
+
     <div class="limiter">
         <div class="container-table100">
             <div class="wrap-table100">
@@ -152,96 +183,128 @@
                                 <td class="column2">Introduction</td>
                                 <td class="column3">02/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
-                                <td class="column5">24</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column5">64</td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=ItYye9h_RXg&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=1">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">002</td>
-                                <td class="column2">jQuery vs Ajax</td>
+                                <td class="column2">Running JavaScript</td>
                                 <td class="column3">05/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
-                                <td class="column5">25</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column5">95</td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=ns_L4kpxY8c&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=2">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">003</td>
-                                <td class="column2">Synchronous Communication</td>
+                                <td class="column2">Comments, Variables, Declarations & Assignments</td>
                                 <td class="column3">09/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">42</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=9aGIAL16DL4&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=7">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">004</td>
-                                <td class="column2">Asynchronous Communication</td>
+                                <td class="column2">Operators</td>
                                 <td class="column3">13/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">61</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=FZzyij43A54&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=9">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">005</td>
-                                <td class="column2">Ajax-based Web App Architecture</td>
+                                <td class="column2">Strings & Literals</td>
                                 <td class="column3">15/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">114</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=uli67N4Z03Y&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=10">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">006</td>
-                                <td class="column2">Ajax Engine</td>
+                                <td class="column2">String Operations & Construction</td>
                                 <td class="column3">18/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">67</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=uli67N4Z03Y&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=10">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">007</td>
-                                <td class="column2">Ready State and Responses</td>
+                                <td class="column2">Arrays & Stacks</td>
                                 <td class="column3">21/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
-                                <td class="column5">25</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column5">55</td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=r4vyq8vvVY0&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=12">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">008</td>
-                                <td class="column2">Open Function</td>
+                                <td class="column2">Functions</td>
                                 <td class="column3">25/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">64</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=Tvu1FqhOUrQ&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=14">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">009</td>
-                                <td class="column2">Send String Function</td>
+                                <td class="column2">Loops</td>
                                 <td class="column3">29/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">42</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=aM_8WRaBljU&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=13">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">010</td>
-                                <td class="column2">Request Headers</td>
+                                <td class="column2">Template Literals</td>
                                 <td class="column3">02/10/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">49</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=NgF9-pdTDGs">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">011</td>
-                                <td class="column2">Ajax Application Flow</td>
+                                <td class="column2">Classes & Objects</td>
                                 <td class="column3">06/10/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">75</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=O9by2KcR2v4&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=8">Watch Now</a></td>
                             </tr>
-
+                            <tr>
+                                <td class="column1">012</td>
+                                <td class="column2">Export & Import</td>
+                                <td class="column3">10/10/2021</td>
+                                <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
+                                <td class="column5">86</td>
+                                <td class="column6"><a href="https://www.youtube.com/watch?v=AD5hxsFJc4o&list=PL0eyrZgxdwhxNGMWROnaY35NLyEjTqcgB&index=4">Watch Now</a></td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
             </div>
         </div>
     </div>
+
+    <fieldset style="margin:auto; width:50%; padding-left:10%;">
+        <div>
+            <input type="checkbox" id="end_check" onclick="myFunction()">
+            <label for="end_check" style="width: 80%; padding-left:10px; display:inline-block; vertical-align:top;">
+                I have finished watching all videos and wish to end the course. I understand that once my end the course, I will not be able to access the course materials again until I re-register for the course.</label>
+
+
+            <button type="button" onclick="location.href='Course JS.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;">De - Enroll From The Course</button>
+
+
+            <script>
+                function myFunction() {
+                    var checkBox = document.getElementById("end_check");
+                    var text = document.getElementById("cancel");
+                    if (checkBox.checked == true) {
+                        text.style.display = "block";
+                    } else {
+                        text.style.display = "none";
+                    }
+                }
+            </script>
+
+        </div>
+    </fieldset>
 
     <div class="footer-basic">
         <footer>
@@ -250,7 +313,8 @@
                 <a href="#"><i style="color: rgb(255, 134, 219);" class="fa fa-instagram fa-fw"></i></a>
                 <a href="#"><i style="color: rgb(255, 0, 34);" class="fa fa-google-plus fa-fw"></i></a>
                 <a href="#"><i style="color: rgb(110, 110, 255);" class="fa fa-facebook fa-fw"></i></a>
-                <a href="#"><i style="color: rgb(251, 255, 0);" class="fa fa-snapchat-ghost fa-fw"></i></a></div>
+                <a href="#"><i style="color: rgb(251, 255, 0);" class="fa fa-snapchat-ghost fa-fw"></i></a>
+            </div>
 
             <ul class="list-inline">
                 <li style="color: black" class="list-inline-item"><a href="Help.html">Help and Support</a></li>

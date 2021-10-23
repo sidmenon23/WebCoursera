@@ -632,3 +632,9 @@
             color: black;
             cursor: pointer;
         }
+        
+        .end_check {
+            height: 55px;
+            width: 55px;
+            background-color: black;
+        }

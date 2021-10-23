@@ -28,15 +28,19 @@
         $password = mysqli_real_escape_string($db, $_POST['password']);
 
 
-        $sql = "SELECT * FROM user WHERE emailID = '$username' and password = '$password'";
+
+        $sql = "SELECT * FROM user WHERE emailID = '$username'";
 
         $result = mysqli_query($db, $sql);
         $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
 
         $count = mysqli_num_rows($result);
 
+    
+        
+        if ($count == 1 && password_verify($password, $row['password']) ) {
 
-        if ($count == 1) {
+
             $_SESSION['userID'] =  $row['userID'];
             $_SESSION['phoneNo'] =  $row['phoneNo'];
 
