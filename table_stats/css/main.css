@@ -112,7 +112,7 @@ body {
 }
 
 .wrap-table100 {
-    width: 1300px;
+    width: 1700px;
 }
 
 
@@ -123,12 +123,15 @@ table {
     width: 100%;
     background-color: #fff;
     padding-top: 20px;
+    padding-right: 5px;
 }
 
+
+/* 
 th {
     position: sticky;
     top: 0;
-}
+} */
 
 th,
 td {
@@ -167,8 +170,15 @@ td {
 }
 
 .column100.column4 {
-    width: 150px;
+    width: 160px;
     /* padding-left: 20px; */
+    text-align: center;
+}
+
+.column100.column5 {
+    width: 160px;
+    /* padding-right: 10px; */
+    /* margin-right: 100px; */
     text-align: center;
 }
 
