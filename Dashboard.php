@@ -26,7 +26,7 @@
                 <li><a class="nav-bar-header" href="#" style="font-size: 25px;">WebCoursera</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Contact.html">Contact Us</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.php">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -35,7 +35,7 @@
                         <button style="background-color: rgb(228, 224, 224); border-radius: 10px; margin-left: 6px; margin-top: 12px; margin-right: 10px;" class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
                     </form>
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
             </ul>
@@ -58,7 +58,7 @@
                             <p style="margin-bottom:5px ">Student</p>
                             <p style="margin-bottom:5px "><?php echo $_SESSION['emailID']; ?></p>
                             <p style="margin-bottom:5px "><?php echo $_SESSION['phoneNo']; ?></p>
-                            <button class='edit_button'>Edit Details</button>
+                            <button style="display:none;" class='edit_button'>Edit Details</button>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@
                     <p style="color: white ">Mosh</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course HTML.html">
+                    <a class="goto_course" href="Course HTML.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -155,7 +155,7 @@
                     <p style="color: white ">Michael</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course CSS.html">
+                    <a class="goto_course" href="Course CSS.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -173,7 +173,7 @@
                     <p style="color: white ">Surya</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course Python.html">
+                    <a class="goto_course" href="Course Python.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -190,7 +190,7 @@
                     <p style="color: white ">Sarah</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course JS.html">
+                    <a class="goto_course" href="Course JS.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -207,7 +207,7 @@
                     <p style="color: white ">Christopher</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course AJAX.html">
+                    <a class="goto_course" href="Course AJAX.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -224,7 +224,7 @@
                     <p style="color: white ">Abel</p>
                 </div>
                 <button style="margin-top: 30px; background-color: black; height: 40px; margin-right: 20px; color: white; border-style: solid; border-color: white; border-radius: 5px; ">
-                    <a class="goto_course" href="Course Java.html">
+                    <a class="goto_course" href="Course Java.php">
                         <p style="font-size: 20px; margin-top: 2px ">
                             Continue
                         </p>
@@ -238,7 +238,7 @@
 
 
 
-    <div class="footer-basic  <?php if ($_SESSION['java'] == 0 && $_SESSION['python'] == 0 && $_SESSION['ajax'] == 0 && $_SESSION['css'] == 0 && $_SESSION['js'] == 0 && $_SESSION['html'] == 0 ) echo 'fix';  ?>  ">
+    <div class="footer-basic fix <?php if ($_SESSION['java'] == 0 && $_SESSION['python'] == 0 && $_SESSION['ajax'] == 0 && $_SESSION['css'] == 0 && $_SESSION['js'] == 0 && $_SESSION['html'] == 0 ) echo 'fix';  ?>  ">
         <footer>
             <div class="social ">
                 <a href="# "><i style="color: rgb(107, 253, 107); " class="fa fa-whatsapp fa-fw "></i></a>

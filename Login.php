@@ -104,7 +104,7 @@
                 <li><a class="nav-bar-header" href="#" style="font-size: 25px;">WebCoursera</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Contact.html">Contact Us</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.php">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>

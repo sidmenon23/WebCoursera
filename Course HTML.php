@@ -49,11 +49,11 @@
     <nav class=" navbar-inverse">
         <div class="nav-bar container-fluid ">
             <ul class="nav navbar-nav ">
-                <li><a class="nav-bar-header" href="Dashboard.html" style="font-size: 25px;">WebCoursera</a></li>
-                <li class="activate nav-bar-header"><a class="nav-bar-header" href="Course HTML.html">HTML</a></li>
+                <li><a class="nav-bar-header" href="Dashboard.php" style="font-size: 25px;">WebCoursera</a></li>
+                <li class="activate nav-bar-header"><a class="nav-bar-header" href="Course HTML.php">HTML</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
                 <li class="nav-bar-header"><a class="nav-bar-header" href="Contact.html">Contact Us</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.html">Courses</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="All Courses.php">Courses</a></li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
                 <li>
@@ -62,7 +62,7 @@
                         <button style="background-color: rgb(228, 224, 224); border-radius: 10px; margin-left: 6px; margin-top: 12px; margin-right: 10px;" class="btn btn-outline-success my-2 my-sm-0 " type="submit ">Search</button>
                     </form>
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
 
             </ul>
@@ -267,10 +267,10 @@
         <div>
             <input type="checkbox" id="end_check" onclick="myFunction()">
             <label for="end_check" style="width: 80%; padding-left:10px; display:inline-block; vertical-align:top;">
-                I have finished watching all videos and wish to end the course. I understand that once my end the course, I will not be able to access the course materials again until I re-register for the course.</label>
+            I have finished watching all the videos and wish to end the course. I understand that once I end the course, I will not be able to access the course materials until I enroll for the course again.</label>
 
 
-            <button type="button" onclick="location.href='Course HTML.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;">De - Enroll From The Course</button>
+<button type="button" onclick="location.href='Course HTML.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;"><a style="text-decoration:none; color:white;" href="certificates/html.png" download="Fundamentals of HTML Course Certificate">De-enroll From The Course</a></button>
 
 
             <script>

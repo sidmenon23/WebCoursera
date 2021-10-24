@@ -15,7 +15,7 @@ if (isset($_POST['delete'])) {
             WHERE `user`.`emailID` = '$email'";
 
 	$result1 = mysqli_query($db, $sql_del);
-	// header("location: Course Stats.php");
+	header("location: Course Stats.php");
 }
 
 ?>
@@ -55,14 +55,13 @@ if (isset($_POST['delete'])) {
 	<nav class=" navbar-inverse">
 		<div class="nav-bar container-fluid ">
 			<ul class="nav navbar-nav ">
-				<li><a class="nav-bar-header" href="../Dashboard.html" style="font-size: 25px;">WebCoursera</a></li>
+				<li><a class="nav-bar-header" href="../Dashboard.php" style="font-size: 25px;">WebCoursera</a></li>
 				<li class="activate nav-bar-header"><a class="nav-bar-header" href="../About Us.html">About Us</a></li>
 				<li class="nav-bar-header"><a class="nav-bar-header" href="../Contact.html">Contact Us</a></li>
-				<li class="nav-bar-header"><a class="nav-bar-header" href="../All Courses.html">Courses</a></li>
+				<li class="nav-bar-header"><a class="nav-bar-header" href="../All Courses.php">Courses</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li class="nav-bar-header"><a class="nav-bar-header" href="../Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-				<li class="nav-bar-header"><a class="nav-bar-header" href="../Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+				<li class="nav-bar-header"><a class="nav-bar-header" href="../Login.php"><span class="glyphicon glyphicon-log-out"></span> Log out</a></li>
 			</ul>
 		</div>
 	</nav>
@@ -74,7 +73,7 @@ if (isset($_POST['delete'])) {
 				<div class="table100 ver6 m-b-110">
 					<div style="margin-left:37vw; margin-top:23px; margin-bottom:-33px;">
 						<form action="Course Stats.php" method="POST">
-							<input type="email" name="email" placeholder="Enter the Email ID" style="background: #000117; color:#fff; border-color:#fff; ">
+							<input type="email" name="email" placeholder="Enter the Email ID" style="background: #fff; color:#000; border-color:#fff; ">
 							<input type="submit" name="delete" value="Delete User" style="margin-left:5px;border-color:#fff ;border-radius: 10px; background-color:#000117; color:#fff;">
 						</form>
 					</div>
