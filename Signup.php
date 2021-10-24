@@ -68,7 +68,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
                 </div>
                 </div>';
     }
-
+    else {
     $sql = "SELECT * FROM user WHERE emailID = '$emailID'";
     $result = mysqli_query($db, $sql);
     $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
@@ -134,7 +134,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
         header("location: Dashboard.php");
   
-    }}
+        }
+
+    }
+}
 
 ?>
 

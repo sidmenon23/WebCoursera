@@ -304,7 +304,7 @@
         </div>
     </fieldset>
 
-    <div class="footer-basic">
+    <div class="footer-basic" style="margin-top: 30px;">
         <footer>
             <div class="social">
                 <a href="#"><i style="color: rgb(107, 253, 107);" class="fa fa-whatsapp fa-fw"></i></a>
