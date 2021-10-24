@@ -36,6 +36,14 @@
 
 
     if (isset($_GET['click'])) {
+
+        // remove_user();
+
+        // $filename = './courses_logo/python.png';
+        // $contenttype = "application/force-download";
+        // header("Content-Type: " . $contenttype);
+        // header("Content-Disposition: attachment; filename=\"" . basename($filename) . "\";");
+        // readfile("your file uploaded path" . $filename);
         remove_user();
     }
 
@@ -281,17 +289,18 @@
             <button type="button" onclick="location.href='Course AJAX.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;">De - Enroll From The Course</button>
 
 
-            <script>
-                function myFunction() {
-                    var checkBox = document.getElementById("end_check");
-                    var text = document.getElementById("cancel");
-                    if (checkBox.checked == true) {
-                        text.style.display = "block";
-                    } else {
-                        text.style.display = "none";
+                <script>
+                    function myFunction() {
+                        var checkBox = document.getElementById("end_check");
+
+                        var text = document.getElementById("cancel");
+                        if (checkBox.checked == true) {
+                            text.style.display = "block";
+                        } else {
+                            text.style.display = "none";
+                        }
                     }
-                }
-            </script>
+                </script>
 
         </div>
     </fieldset>

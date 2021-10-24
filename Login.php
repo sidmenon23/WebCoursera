@@ -55,8 +55,12 @@
             $_SESSION['java'] =  $row['java'];
             $_SESSION['js'] =  $row['js'];
 
-            
-            header("location: Dashboard.php");
+            if($row['admin'] == '0'){
+                header("location: Dashboard.php");
+            }
+            else{
+                header("location: table_stats/COurse Stats.php");
+            }
         } else {
             echo '<script>
                     $(document).ready(function(){
