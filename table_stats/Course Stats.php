@@ -68,7 +68,7 @@ if (isset($_POST['delete'])) {
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver6 m-b-110">
-					<div>
+					<div style="margin:25px">
 						<form action="Course Stats.php" method="POST">
 							<input type="email" name="email" placeholder="Enter the Email ID">
 							<input type="submit" name="delete" value="Delete User">

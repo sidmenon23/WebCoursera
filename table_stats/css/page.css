@@ -10,14 +10,18 @@ table.dataTable {
     padding-top: 10px;
     padding-left: 25px;
     float: left;
-    background-color: rgba(255, 255, 255, 0.32);
+    background:none;
+    color: #fff;
+}
+
+.dataTables_wrapper .dataTables_length select {
     color: #000117;
 }
 
 .dataTables_wrapper .dataTables_filter {
     float: right;
     text-align: right;
-    background-color: rgba(255, 255, 255, 0.32);
+    background: none;
     color: #fff;
     padding-top: 6px;
     padding-right: 28px;
@@ -36,6 +40,7 @@ table.dataTable {
     padding-top: 0.755em;
     color: #fff;
     padding-left: 28px;
+    margin: 20px;
 }
 
 .dataTables_wrapper .dataTables_paginate {
@@ -44,6 +49,7 @@ table.dataTable {
     padding-top: 0.25em;
     padding-bottom: 5px;
     padding-right: 5px;
+    margin: 20px;
 }
 
 .dataTables_wrapper .dataTables_paginate .paginate_button {
