@@ -15,6 +15,26 @@ session_start();
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+
+    <script>
+        function showResult(str) {
+            if (str.length == 0) {
+                document.getElementById("livesearch").innerHTML = "";
+                document.getElementById("livesearch").style.border = "0px";
+                return;
+            }
+            var xmlhttp = new XMLHttpRequest();
+            xmlhttp.onreadystatechange = function() {
+                if (this.readyState == 4 && this.status == 200) {
+                    document.getElementById("livesearch").innerHTML = this.responseText;
+                    document.getElementById("livesearch").style.border = "1px solid #A5ACB2";
+                }
+            }
+            xmlhttp.open("GET", "livesearch.php?q=" + str, true);
+            xmlhttp.send();
+        }
+    </script>
+
 </head>
 
 <body>
@@ -113,7 +133,7 @@ session_start();
 
 
     <nav class="navbar-inverse">
-        <div class="nav-bar container-fluid ">
+        <div class="nav-bar container-fluid " style="height: 50px;">
             <ul class="nav navbar-nav ">
                 <li><a class="nav-bar-header" href="Dashboard.php" style="font-size: 25px;">WebCoursera</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>
@@ -124,19 +144,21 @@ session_start();
                 <li>
                     <ul style="margin-top: 8px; margin-right: 10px;" class="nav navbar-nav navbar-right">
                         <form class="form-inline my-2 my-lg-0" style="margin-top:2px;">
-                            <input style="color: red; border-radius: 10px;" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-                            <button style="background-color: rgb(228, 224, 224); border-radius: 10px;" class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                            <input style="color: black; border-radius: 10px;" class="form-control mr-sm-2" type="search" placeholder="Search Course" aria-label="Search" size="30" onkeyup="showResult(this.value)">
+                            <div id="livesearch" style="background-color: white;color: black; text-decoration: none;"></div>
+
                         </form>
                     </ul>
+
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Signup.php"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+
             </ul>
         </div>
     </nav>
 
 
-    <div class="container" style="margin-top: 60px;">
+    <div class="container" style="margin-top: 150px;">
         <div class="row">
             <div class="col-sm-6 col-md-4">
                 <div class="thumbnails" style="width: 350px;">

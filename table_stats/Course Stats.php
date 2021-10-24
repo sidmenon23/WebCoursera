@@ -9,9 +9,13 @@ $rows = mysqli_fetch_all($result, MYSQLI_ASSOC);
 
 if (isset($_POST['delete'])) {
 	$email = mysqli_real_escape_string($db, $_POST['email']);
-	$sql_del = " DELETE FROM user WHERE emailID = '$email' ";
+	// $sql_del = " DELETE FROM user WHERE emailID = '$email' ";
+
+	$sql_del ="DELETE FROM `user`
+            WHERE `user`.`emailID` = '$email'";
+
 	$result1 = mysqli_query($db, $sql_del);
-	header("location: Course Stats.php");
+	// header("location: Course Stats.php");
 }
 
 ?>

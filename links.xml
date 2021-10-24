@@ -1,0 +1,26 @@
+<pages>
+    <link>
+        <title>HTML Course Page</title>
+        <url>Course HTML.php</url>
+    </link>
+    <link>
+        <title>CSS Course Page</title>
+        <url>Course CSS.php</url>
+    </link>
+    <link>
+        <title>Javascript Course Page</title>
+        <url>Course JS.php</url>
+    </link>
+    <link>
+        <title>Java Course Page</title>
+        <url>Course Java.php</url>
+    </link>
+    <link>
+        <title>Python Course Page</title>
+        <url>Course Python.php</url>
+    </link>
+    <link>
+        <title>AJAX Course Page</title>
+        <url>Course AJAX.php</url>
+    </link>
+</pages>
