@@ -58,7 +58,7 @@
                             <p style="margin-bottom:5px ">Student</p>
                             <p style="margin-bottom:5px "><?php echo $_SESSION['emailID']; ?></p>
                             <p style="margin-bottom:5px "><?php echo $_SESSION['phoneNo']; ?></p>
-                            <button class='edit_button'>Edit Details</button>
+                            <button style="display:none;" class='edit_button'>Edit Details</button>
                         </div>
                     </div>
                 </div>
@@ -238,7 +238,7 @@
 
 
 
-    <div class="footer-basic  <?php if ($_SESSION['java'] == 0 && $_SESSION['python'] == 0 && $_SESSION['ajax'] == 0 && $_SESSION['css'] == 0 && $_SESSION['js'] == 0 && $_SESSION['html'] == 0 ) echo 'fix';  ?>  ">
+    <div class="footer-basic fix <?php if ($_SESSION['java'] == 0 && $_SESSION['python'] == 0 && $_SESSION['ajax'] == 0 && $_SESSION['css'] == 0 && $_SESSION['js'] == 0 && $_SESSION['html'] == 0 ) echo 'fix';  ?>  ">
         <footer>
             <div class="social ">
                 <a href="# "><i style="color: rgb(107, 253, 107); " class="fa fa-whatsapp fa-fw "></i></a>

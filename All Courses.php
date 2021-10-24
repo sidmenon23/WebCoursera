@@ -151,7 +151,7 @@ session_start();
                     </ul>
 
                 </li>
-                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.html"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
+                <li class="nav-bar-header"><a class="nav-bar-header" href="Login.php"><span class="glyphicon glyphicon-log-out"></span> Logout</a></li>
 
             </ul>
         </div>
