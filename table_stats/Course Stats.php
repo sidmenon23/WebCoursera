@@ -72,10 +72,10 @@ if (isset($_POST['delete'])) {
 		<div class="container-table100">
 			<div class="wrap-table100">
 				<div class="table100 ver6 m-b-110">
-					<div>
+					<div style="margin-left:37vw; margin-top:23px; margin-bottom:-33px;">
 						<form action="Course Stats.php" method="POST">
-							<input type="email" name="email" placeholder="Enter the Email ID">
-							<input type="submit" name="delete" value="Delete User">
+							<input type="email" name="email" placeholder="Enter the Email ID" style="background: #000117; color:#fff; border-color:#fff; ">
+							<input type="submit" name="delete" value="Delete User" style="margin-left:5px;border-color:#fff ;border-radius: 10px; background-color:#000117; color:#fff;">
 						</form>
 					</div>
 					<table data-vertable="ver6" class="sortable" id="page">
@@ -90,7 +90,8 @@ if (isset($_POST['delete'])) {
 								<th class="column100 column4">Python</th>
 								<th class="column100 column4">JavaScript</th>
 								<th class="column100 column4">Java</th>
-								<th class="column100 column4">AJAX</th>
+								<th class="column100 column5">AJAX</th>
+								<!-- <th class="column100 column4">AJAX</th> -->
 							</tr>
 						</thead>
 						<tbody>
