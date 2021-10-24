@@ -15,7 +15,7 @@ if (isset($_POST['delete'])) {
             WHERE `user`.`emailID` = '$email'";
 
 	$result1 = mysqli_query($db, $sql_del);
-	// header("location: Course Stats.php");
+	header("location: Course Stats.php");
 }
 
 ?>
@@ -73,7 +73,7 @@ if (isset($_POST['delete'])) {
 				<div class="table100 ver6 m-b-110">
 					<div style="margin-left:37vw; margin-top:23px; margin-bottom:-33px;">
 						<form action="Course Stats.php" method="POST">
-							<input type="email" name="email" placeholder="Enter the Email ID" style="background: #000117; color:#fff; border-color:#fff; ">
+							<input type="email" name="email" placeholder="Enter the Email ID" style="background: #fff; color:#000; border-color:#fff; ">
 							<input type="submit" name="delete" value="Delete User" style="margin-left:5px;border-color:#fff ;border-radius: 10px; background-color:#000117; color:#fff;">
 						</form>
 					</div>
