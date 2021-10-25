@@ -295,7 +295,7 @@
             I have finished watching all the videos and wish to end the course. I understand that once I end the course, I will not be able to access the course materials until I enroll for the course again.</label>
 
 
-<button type="button" onclick="location.href='Course Python.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;"><a style="text-decoration:none; color:white;" href="certificates/python.png" download="Fundamentals of Python Course Certificate">De-enroll From The Course</a></button>
+<button type="button" onclick="location.href='Course Python.php?click=remove';" class="btn btn-danger" id="cancel" style="display: none;margin-left:20%; margin-top:20px;"><a style="text-decoration:none; color:white;" href="certificates/python.png" download="Fundamentals of Python Course Certificate">Disenroll From The Course</a></button>
 
 
             <script>
