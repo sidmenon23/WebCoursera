@@ -190,9 +190,18 @@ session_start();
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                             </p>
+                            <p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM html";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
+
+                                 ?>
+                            </p>
 
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;padding-top:5px;">
                             <a href="All Courses.php?click=html" class="btn btn-primary " role="button " <?php if ($_SESSION['html'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course HTML.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
@@ -222,9 +231,17 @@ session_start();
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                             </p>
+                            <p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM css";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
 
+                                 ?>
+                            </p>
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px; padding-top:5px;">
                             <a href="All Courses.php?click=css" class="btn btn-primary " role="button " <?php if ($_SESSION['css'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course CSS.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
@@ -262,9 +279,17 @@ session_start();
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star checked"></span>
                             </p>
+<p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM js";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
 
+                                 ?>
+                            </p>
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;padding-top:5px;">
                             <a href="All Courses.php?click=js" class="btn btn-primary " role="button " <?php if ($_SESSION['js'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course JS.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
@@ -296,9 +321,17 @@ session_start();
                                 <span class="fa fa-star  checked"></span>
                                 <span class="fa fa-star"></span>
                             </p>
+<p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM python";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
 
+                                 ?>
+                            </p>
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;padding-top:5px;">
                             <a href="All Courses.php?click=python" class="btn btn-primary " role="button " <?php if ($_SESSION['python'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course Python.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
@@ -329,9 +362,17 @@ session_start();
                                 <span class="fa fa-star"></span>
                                 <span class="fa fa-star"></span>
                             </p>
+                            <p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM ajax";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
 
+                                 ?>
+                            </p>
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;padding-top:5px;">
                             <a href="All Courses.php?click=ajax" class="btn btn-primary " role="button " <?php if ($_SESSION['ajax'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course AJAX.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
@@ -369,9 +410,17 @@ session_start();
                                 <span class="fa fa-star checked"></span>
                                 <span class="fa fa-star"></span>
                             </p>
+                            <p>
+                                No. of Registered Students: <?php 
+                                $sql = "SELECT COUNT(*) FROM java";
+                                $result = mysqli_query($GLOBALS['db'], $sql);
+                                $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
+                                echo $row["COUNT(*)"];
 
+                                 ?>
+                            </p>
                         </div>
-                        <p style="display: flex;justify-content: center; padding-bottom: 20px;">
+                        <p style="display: flex;justify-content: center; padding-bottom: 20px;padding-top:5px;">
                             <a href="All Courses.php?click=java" class="btn btn-primary " role="button " <?php if ($_SESSION['java'] == 1) { ?>style="margin-right: 20px;display:none" <?php } ?>>Enroll</a> <a href="Course Java.php" class="btn btn-default " role="button " style="margin-left: 10px;">View More</a>
                         </p>
                     </div>
