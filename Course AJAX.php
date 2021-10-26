@@ -24,7 +24,7 @@
         $id = $_SESSION['userID'];
 
         $sql = "DELETE FROM ajax 
-            WHERE `user`.`userID` = '$id'";;
+            WHERE userID = '$id'";;
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         $sql = "UPDATE `user` SET `ajax` = '0' 

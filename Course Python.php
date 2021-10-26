@@ -25,7 +25,7 @@
         $id = $_SESSION['userID'];
 
         $sql = "DELETE FROM python 
-            WHERE `user`.`userID` = '$id'";;
+            WHERE userID = '$id'";;
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         $sql = "UPDATE `user` SET `python` = '0' 

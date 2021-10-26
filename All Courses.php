@@ -133,7 +133,7 @@ session_start();
 
 
     <nav class="navbar-inverse">
-        <div class="nav-bar container-fluid " style="height: 50px;">
+        <div class="nav-bar container-fluid " style="height: 54px;">
             <ul class="nav navbar-nav ">
                 <li><a class="nav-bar-header" href="Dashboard.php" style="font-size: 25px;">WebCoursera</a></li>
                 <li class="activate nav-bar-header"><a class="nav-bar-header" href="About Us.html">About Us</a></li>

@@ -59,7 +59,7 @@
                 header("location: Dashboard.php");
             }
             else{
-                header("location: table_stats/COurse Stats.php");
+                header("location: table_stats/Course Stats.php");
             }
         } else {
             echo '<script>

@@ -24,7 +24,7 @@
         $id = $_SESSION['userID'];
 
         $sql = "DELETE FROM js 
-            WHERE `user`.`userID` = '$id'";;
+            WHERE userID = '$id'";;
         $result = mysqli_query($GLOBALS['db'], $sql);
 
         $sql = "UPDATE `user` SET `js` = '0' 
