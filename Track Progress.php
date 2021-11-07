@@ -4,8 +4,8 @@ include("config.php");
 session_start();
 
 $id = $_SESSION['userID'];
-
-$sql = "SELECT progress FROM css WHERE userID = '$id'";;
+$table = $_GET['table'];
+$sql = "SELECT progress FROM $table WHERE userID = '$id'";;
 $result = mysqli_query($GLOBALS['db'], $sql);
 
 $row = mysqli_fetch_array($result, MYSQLI_ASSOC);
