@@ -17,10 +17,9 @@ $progress[$_GET['id']] =1;
 $res = json_encode($progress);
 
 
-$sql = "UPDATE css SET progress = '$res' WHERE userID = '$id'";
+$sql = "UPDATE $table SET progress = '$res' WHERE userID = '$id'";
 $result = mysqli_query($GLOBALS['db'], $sql);
 
 $navigate= 'location: ' . $_GET['url'];
 header($navigate);
-
 ?>

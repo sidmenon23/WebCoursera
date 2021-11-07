@@ -182,7 +182,7 @@
                             <td class="column3 ">02/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">54</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=Mp0f0zTPLec&list=PL081AC329706B2953">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=0&table=html&url=https://www.youtube.com/watch?v=Mp0f0zTPLec&list=PL081AC329706B2953">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">002</td>
@@ -190,7 +190,7 @@
                             <td class="column3 ">05/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">95</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=qseNjA-73Fw&list=PL081AC329706B2953&index=2">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=1&table=html&url=https://www.youtube.com/watch?v=qseNjA-73Fw&list=PL081AC329706B2953&index=2">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">003</td>
@@ -198,7 +198,7 @@
                             <td class="column3 ">09/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">28</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=eDR7zpVfX_4&list=PL081AC329706B2953&index=3">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=2&table=html&url=https://www.youtube.com/watch?v=eDR7zpVfX_4&list=PL081AC329706B2953&index=3">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">004</td>
@@ -206,7 +206,7 @@
                             <td class="column3 ">13/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">43</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=a5KD47HDRho&list=PL081AC329706B2953&index=5">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=3&table=html&url=https://www.youtube.com/watch?v=a5KD47HDRho&list=PL081AC329706B2953&index=5">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">005</td>
@@ -214,7 +214,7 @@
                             <td class="column3 ">15/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">114</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=0pb81VdSO_E&list=PL081AC329706B2953&index=6">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=4&table=html&url=https://www.youtube.com/watch?v=0pb81VdSO_E&list=PL081AC329706B2953&index=6">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">006</td>
@@ -222,7 +222,7 @@
                             <td class="column3 ">18/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">17</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=JaLebQ-QDVo&list=PL081AC329706B2953&index=7">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=5&table=html&url=https://www.youtube.com/watch?v=JaLebQ-QDVo&list=PL081AC329706B2953&index=7">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">007</td>
@@ -230,7 +230,7 @@
                             <td class="column3 ">21/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">55</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=tIznbrsfQZQ&list=PL081AC329706B2953&index=8">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=6&table=html&url=https://www.youtube.com/watch?v=tIznbrsfQZQ&list=PL081AC329706B2953&index=8">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">008</td>
@@ -238,7 +238,7 @@
                             <td class="column3 ">25/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">64</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=Q7eoOSZ7JdY&list=PL081AC329706B2953&index=9">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=7&table=html&url=https://www.youtube.com/watch?v=Q7eoOSZ7JdY&list=PL081AC329706B2953&index=9">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">009</td>
@@ -246,7 +246,7 @@
                             <td class="column3 ">29/09/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">22</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=P71U-doyzNg&list=PL081AC329706B2953&index=10">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=8&table=html&url=https://www.youtube.com/watch?v=P71U-doyzNg&list=PL081AC329706B2953&index=10">Watch Now</a></td>
                         </tr>
                         <tr>
                             <td class="column1 ">010</td>
@@ -254,7 +254,7 @@
                             <td class="column3 ">02/10/2021</td>
                             <td class="column4 ">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                             <td class="column5 ">32</td>
-                            <td class="column6 "><a href="https://www.youtube.com/watch?v=tzAEGnBNAn0&list=PL081AC329706B2953&index=13">Watch Now</a></td>
+                            <td class="column6 "><a href="Track Progress.php?id=9&table=html&url=https://www.youtube.com/watch?v=tzAEGnBNAn0&list=PL081AC329706B2953&index=13">Watch Now</a></td>
                         </tr>
                     </tbody>
                 </table>

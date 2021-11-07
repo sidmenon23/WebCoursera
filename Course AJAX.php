@@ -189,7 +189,8 @@
                                 <td class="column3">02/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">24</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=0&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">002</td>
@@ -197,7 +198,8 @@
                                 <td class="column3">05/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">25</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=1&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">003</td>
@@ -205,7 +207,8 @@
                                 <td class="column3">09/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">42</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=2&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">004</td>
@@ -213,7 +216,8 @@
                                 <td class="column3">13/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">61</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=3&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">005</td>
@@ -221,7 +225,8 @@
                                 <td class="column3">15/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">114</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=4&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">006</td>
@@ -229,7 +234,8 @@
                                 <td class="column3">18/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">67</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=5&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">007</td>
@@ -237,7 +243,8 @@
                                 <td class="column3">21/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">25</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=6&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">008</td>
@@ -245,7 +252,8 @@
                                 <td class="column3">25/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">64</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=7&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">009</td>
@@ -253,7 +261,8 @@
                                 <td class="column3">29/09/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">42</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=8&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">010</td>
@@ -261,7 +270,8 @@
                                 <td class="column3">02/10/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">49</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=9&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
                             <tr>
                                 <td class="column1">011</td>
@@ -269,7 +279,8 @@
                                 <td class="column3">06/10/2021</td>
                                 <td class="column4">This is a mock description for the lecture video, explaining in brief, what the video is about.</td>
                                 <td class="column5">75</td>
-                                <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
+                                <!-- <td class="column6"><a href="https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td> -->
+                                <td class="column6"><a href="Track Progress.php?id=10&table=ajax&url=https://www.youtube.com/watch?v=ACNGhBfNftA&list=PLgp11Hu-N4DT59rXjR57hhy6pMH3I2yHU">Watch Now</a></td>
                             </tr>
 
                         </tbody>
